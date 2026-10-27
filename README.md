@@ -2,13 +2,13 @@
 
 ## Informações do Aluno
 
-- **Nome:** Matheus Costa Cutrim
-- **RM:** 568087
-- **Turma:** [preencher]
-- **Curso:** Ciência da Computação
-- **GitHub:** [@matheus-ccutrim-cs](https://github.com/matheus-ccutrim-cs)
+* **Nome:** Matheus Costa Cutrim
+* **RM:** 568087
+* **Turma:** 2CCPR
+* **Curso:** Ciência da Computação
+* **GitHub:** [@matheus-ccutrim-cs](https://github.com/matheus-ccutrim-cs)
 
----
+\---
 
 ## Descrição do Projeto
 
@@ -20,7 +20,7 @@ Este projeto reúne práticas das aulas 1 a 9 de Programação Orientada a Objet
 
 ```powershell
 New-Item -ItemType Directory -Force out
-javac -encoding UTF-8 -d out (Get-ChildItem -Recurse src -Filter *.java | ForEach-Object { $_.FullName })
+javac -encoding UTF-8 -d out (Get-ChildItem -Recurse src -Filter \*.java | ForEach-Object { $\_.FullName })
 java -cp out br.com.fiapride.Main
 java -cp out br.com.fiapride.biblioteca.MainBiblioteca
 ```
@@ -29,27 +29,27 @@ Em Linux/macOS:
 
 ```bash
 mkdir -p out
-javac -encoding UTF-8 -d out $(find src -name '*.java')
+javac -encoding UTF-8 -d out $(find src -name '\*.java')
 java -cp out br.com.fiapride.Main
 java -cp out br.com.fiapride.biblioteca.MainBiblioteca
 ```
 
 ## Checklist de Implementação
 
-- [x] Aula 1 - Classes e Objetos
-- [x] Aula 2 - Métodos
-- [x] Aula 3 - Encapsulamento
-- [x] Aula 4 - Construtores
-- [x] Aula 5 - Associação
-- [x] Aula 6 - Herança
-- [x] Aula 7 - Polimorfismo
-- [x] Aula 8 - Classes Abstratas
-- [x] Aula 9 - Interfaces
+* \[x] Aula 1 - Classes e Objetos
+* \[x] Aula 2 - Métodos
+* \[x] Aula 3 - Encapsulamento
+* \[x] Aula 4 - Construtores
+* \[x] Aula 5 - Associação
+* \[x] Aula 6 - Herança
+* \[x] Aula 7 - Polimorfismo
+* \[x] Aula 8 - Classes Abstratas
+* \[x] Aula 9 - Interfaces
 
 ## Diagramas
 
-![Diagrama de classes do FiapRide](docs/fiapride.png)
-![Diagrama de classes da biblioteca](docs/biblioteca.png)
+!\[Diagrama de classes do FiapRide](docs/fiapride.png)
+!\[Diagrama de classes da biblioteca](docs/biblioteca.png)
 
 ## Perguntas de Reflexão
 
@@ -105,7 +105,7 @@ O compilador não conhece a intenção de negócio: uma classe comum pode ser in
 
 **Por que herança simples e múltiplas interfaces?**
 
-Java permite estender uma única classe, evitando a ambiguidade de herdar estado e implementações de duas classes com o mesmo método. Uma classe pode implementar várias interfaces para assumir diferentes contratos. `CarroEletrico`, por exemplo, estende `Veiculo` e implementa `Recarregavel`. Interfaces não eliminam todas as ambiguidades: se duas fornecerem métodos `default` com a mesma assinatura, a classe deverá resolver o conflito sobrescrevendo o método. A constante `CARGA_MAXIMA` define o limite compartilhado da interface e `recarregar` define uma capacidade que pode ser implementada por tipos diferentes.
+Java permite estender uma única classe, evitando a ambiguidade de herdar estado e implementações de duas classes com o mesmo método. Uma classe pode implementar várias interfaces para assumir diferentes contratos. `CarroEletrico`, por exemplo, estende `Veiculo` e implementa `Recarregavel`. Interfaces não eliminam todas as ambiguidades: se duas fornecerem métodos `default` com a mesma assinatura, a classe deverá resolver o conflito sobrescrevendo o método. A constante `CARGA\_MAXIMA` define o limite compartilhado da interface e `recarregar` define uma capacidade que pode ser implementada por tipos diferentes.
 
 ## Desafios Técnicos Implementados
 
@@ -132,3 +132,4 @@ Polimorfismo foi um dos conceitos mais desafiadores: a referência pode ser `Vei
 **O que melhoraria se pudesse refazer?**
 
 Eu adicionaria testes automatizados, identificadores únicos, armazenamento em banco e tratamento de erros mais detalhado. Para valores monetários, substituiria `double` por `BigDecimal`. Também implementaria autenticação e validação real para alterações de placa, além de autonomia baseada em capacidade e consumo. Essas mudanças aproximariam o exercício de um sistema usado fora da sala de aula.
+
