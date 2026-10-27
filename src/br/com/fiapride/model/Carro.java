@@ -6,5 +6,6 @@ public class Carro extends Veiculo {
         if (portas <= 0) throw new IllegalArgumentException("Valor inválido");
         this.portas = portas;
     }
+    @Override public double calcularAutonomia() { return 600; }
     public int getPortas() { return portas; }
 }

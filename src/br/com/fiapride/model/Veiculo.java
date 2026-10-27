@@ -13,5 +13,6 @@ public class Veiculo {
     }
     public void atualizarPlaca(String placa) { setPlaca(placa); }
     public String getPlaca() { return placa; }
+    public double calcularAutonomia() { return 0; }
     public String getModelo() { return modelo; }
 }
