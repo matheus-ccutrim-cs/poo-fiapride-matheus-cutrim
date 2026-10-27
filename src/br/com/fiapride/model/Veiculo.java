@@ -1,5 +1,5 @@
 package br.com.fiapride.model;
-public class Veiculo {
+public abstract class Veiculo {
     private final String modelo;
     private String placa;
     public Veiculo() { this("Modelo não informado", "ABC1D23"); }
@@ -13,6 +13,6 @@ public class Veiculo {
     }
     public void atualizarPlaca(String placa) { setPlaca(placa); }
     public String getPlaca() { return placa; }
-    public double calcularAutonomia() { return 0; }
+    public abstract double calcularAutonomia();
     public String getModelo() { return modelo; }
 }
